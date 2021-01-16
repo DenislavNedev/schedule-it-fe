@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SCHEDULE IT</title>
+    
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/add-slot.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/add-event.css">
+    
+    <script type="text/javascript" src="../js/addSlot.js" defer></script>
+    <script type="text/javascript" src="../js/index.js" defer></script>
+</head>
+
+<body class="center">
+    <header class="logo-header container">
+        <img id="logo" src="../img/logo.png"></img>
+        <p id="logo-title">Schedule it</p>
+    </header>
+    <nav class="nav" id="navigation">
+        <a class="nav-item" href="profile.html">Profile</a>
+        <a class="nav-item" href="calendar.html">Calendar</a>
+        <a id="add-slots-menu-item" class="nav-item" href="add-slot.html">Add slots</a>
+    </nav>
+    <main>
+        <div class="panel-forms add-slots-content">
+            <section id="add-slots-panel" class="panels">
+                <article id="add-slots-content">
+                    <form action="" id="add-slots-form">
+                        <fieldset id="add-slots-inputs">
+                            <legend class="panel-heading">Add slot</legend>
+                            <!-- <label for="add-slot-time-name">Name:</label> -->
+                            <input type="text" name="add-slot-name" id="add-slot-name" placeholder="Name" required>
+                            <label for="add-slot-time-date">Date:</label>
+                            <input type="date" id="add-slot-date" name="add-slot-date" required>
+                            <label for="add-slot-time-start">Start hour:</label>
+                            <input type="time" id="add-slot-time-start" name="add-slot-time-start" required>
+                            <label for="add-slot-time-end">End hour:</label>
+                            <input type="time" id="add-slot-time-end" name="add-slot-time-end" required>
+                            <label for="add-slot-time-end">Duration of single event in minutes:</label>
+                            <input type="number" min="0" id="add-slot-time-period" name="add-slot-time-period" required>
+                            <div id="add-slot-failure" class="hidden">
+                                <strong id="add-slot-failure-text">Error!</strong>
+                            </div>
+                            <button id="add-slot-button" class="panel-buttons">Add slot</button>
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </div>
+        <!-- Success Modal -->
+        <section id="successModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-body">
+                    <h2>You successfully added a new slot.</h2>
+                    <button class="orange-buttons slots-btns" id="add-another-slot-button">Add another one</button>
+                    <button class="orange-buttons slots-btns" id="go-to-calendar-button">Go to calendar</button>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <h3>Created by Denislav, Eva & Petar</h3>
+        <small>&copy; Copyright 2020</small>
+    </footer>
+</body>
+
+</html>

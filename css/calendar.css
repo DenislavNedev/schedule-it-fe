@@ -1,0 +1,151 @@
+/* #calendars {
+  display: inline-flex;
+} */
+
+.calendar {
+  background-color: #fff;
+  box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.75);
+  padding: 20px 30px;
+  color: #363b41;
+  width: fit-content;
+  display: inline-block;
+  text-align: left;
+  margin: 10px;
+  vertical-align: top;
+}
+
+.calendar_header {
+  /* font-size: 22px; */
+  border-bottom: 2px solid rgba(0, 0, 0, 0.08);
+  text-align: center;
+}
+
+.calendar_plan {
+  margin: 20px 0 30px;
+}
+
+.cl_plan {
+  background-image: linear-gradient(222deg, #ff953e, #fa7900);
+  background-color: #fa7900;
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+  text-align: center;
+  color: #fff;
+  padding: 0px 20px;
+}
+
+.cl_copy {
+  font-size: 20px;
+  margin: 20px 0;
+  display: inline-block;
+}
+
+.cl_add {
+  display: inline-block;
+  border-color: #fafafa;
+  border-radius: 50%;
+  background-color: #fafafa;
+  cursor: pointer;
+  color: #c2c2c2;
+  margin-left: 15px;
+  padding: 5px 13px;
+  font-weight: 1000;
+  font-size: 20px;
+  text-align: center;
+  font-style: unset;
+}
+
+.calendar_events {
+  color: #a39d9e;
+}
+
+/* .ce_title {
+  font-size: 14px;
+} */
+
+.event_item {
+  padding: 0px 5px 10px 5px;
+  cursor: pointer;
+}
+
+.event_item:hover {
+  background-image: linear-gradient(-222deg, #ff953e, #fa7900);
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+
+.event_item:hover .ei_Dot {
+  background-color: #fff;
+}
+
+.event_item:hover .ei_Copy, .event_item:hover .ei_Title, .event_item:hover .ei_Info {
+  color: #fff;
+}
+
+.ei_Dot, .ei_Title {
+  display: inline-block;
+}
+
+.ei_Dot {
+  border-radius: 50%;
+  width: 10px;
+  height: 10px;
+  background-color: #a39d9e;
+  box-shadow: 0px 0px 52px -18px rgba(0, 0, 0, 0.75);
+}
+
+.dot_active {
+  background-color: #fa7900;
+}
+
+.ei_Title {
+  margin-left: 10px;
+  color: #363b41;
+}
+
+.ei_Copy {
+  font-size: 14px;
+  margin-left: 27px;
+  margin-top: 18px;
+  text-align: right;
+  float: right;
+}
+
+.ei_Info {
+  font-size: 14px;
+  margin-left: 27px;
+  margin-top: 18px;
+}
+
+#add-event-btn {
+  margin: auto;
+  margin-bottom: 10px;
+  margin-top: 10px;
+  display: block;
+}
+
+#verification-code-input {
+  margin-bottom: 10px;
+  height: 25px;
+  width: 20rem;
+}
+
+#verification-code-input:focus {
+  outline: none !important;
+  border: 0.4px solid #fa7900;
+  box-shadow: 0 0 8px #fa7900;
+}
+
+#verification-code-error {
+  color: #ea4335;
+  margin-top: 15px;
+  text-align: center;
+  margin-bottom: 15px;
+}
+
+.hidden {
+  display: none;
+}
+
+#verification-modal-body {
+  padding-top: 40px;
+  padding-bottom: 40px;
+}

@@ -1,0 +1,72 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SCHEDULE IT</title>
+    
+    <link rel="icon" href="../img/logo.png" type="image/x-icon"> 
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login-register.css">
+    <link rel="stylesheet" type="text/css" href="../css/radio-buttons.css">
+    
+    <script type="text/javascript" src="../js/register.js" defer></script>
+    <script type="text/javascript" src="../js/index.js" defer></script>
+</head>
+
+<body class="center">
+    <header class="logo-header container">
+        <img id="logo" src="../img/logo.png"></img>
+        <p id="logo-title">Schedule it</p>
+    </header>
+    <nav class="nav" id="navigation">
+        <a class="nav-item" href="profile.html">Profile</a>
+        <a class="nav-item" href="calendar.html">Calendar</a>
+        <a id="add-slots-menu-item" class="nav-item" href="add-slot.html">Add slots</a>
+    </nav>
+    <main>
+        <div class="panel-forms login-register-content">
+            <section id="register-panel" class="panels">
+                <article id="register-content">
+                    <form id="register-form">
+                        <fieldset id="register-inputs">
+                            <legend class="panel-heading">Register</legend>
+                            <input type="text" name="register-username" id="register-username" placeholder="Username"
+                                required>
+                            <input type="text" name="register-name" id="register-name" placeholder="Name" required>
+                            <input type="email" name="register-email" id="register-email" placeholder="E-mail" required>
+                            <input type="password" name="register-password" id="register-password"
+                                placeholder="Password" required>
+                            <input type="password" name="register-password-confirm" id="register-password-confirm"
+                                placeholder="Confirm password" required>
+                            <p>You are a:</p>
+                            <p>
+                                <input type="radio" id="teacher" name="radio-group" checked>
+                                <label for="teacher">Teacher</label>
+                            </p>
+                            <p>
+                                <input type="radio" id="student" name="radio-group">
+                                <label for="student">Student</label>
+                            </p>
+                            <div id="register-failure" class="hidden">
+                                <strong id="register-failure-text">Error!</strong>
+                            </div>
+                            <input type="number" name="register-faculty-number" id="register-faculty-number"
+                                placeholder="Faculty number" required>
+                            <button id="register-button" class="panel-buttons">Register</button>
+                            <a id="login-link" class="panel-links" href="login.html">Already registered? Login!</a>
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <h3>Created by Denislav, Eva & Petar</h3>
+        <small>&copy; Copyright 2020</small>
+    </footer>
+</body>
+
+</html>

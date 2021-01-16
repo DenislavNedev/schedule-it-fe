@@ -1,0 +1,109 @@
+.add-slots-content {
+    background-color: #fff;
+    box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.75);
+    padding: 20px 30px;
+    color: #363b41;
+    display: inline-block;
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
+}
+
+input:focus {
+    outline: none !important;
+    border: 0.4px solid #fa7900;
+    box-shadow: 0 0 8px #fa7900;
+}
+
+#heading-text {
+    color: #fa7900;
+    font-size: 2em;
+}
+
+#deading #inner-text {
+    font-size: large;
+}
+
+.panel-heading {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0;
+}
+
+.panels {
+    margin-top: 10px;
+    padding: 10px 10px 0px 10px;
+}
+
+.panels fieldset > input {
+    margin-bottom: 10px;
+    margin-top: 5px;
+    height: 25px;
+    width: 20rem;
+    display: block;
+}
+
+#add-slots-form fieldset {
+    border: 0;
+    padding: 0px;
+}
+
+legend {
+    color: #fa7900;
+    text-align: left;
+}
+
+#add-slots-panel {
+    display: table-cell;
+}
+
+#add-slots {
+    padding-left: 0;
+}
+
+input {
+    display: block;
+}
+
+.panel-buttons {
+    float: right;
+    height: 35px;
+    font-weight: bold;
+}
+
+#add-slot-button {
+    cursor: pointer;
+    background-color: #fa7900;
+    color: #ffffff;
+    border: none;
+}
+
+.hidden {
+    display: none;
+}
+
+#add-slot-failure {
+    color: #ea4335;
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 15px;
+}
+
+.slots-btns {
+    margin-bottom: 20px;
+}
+
+@keyframes shake {
+  0% { transform: translate(1px, 1px) rotate(0deg); }
+  10% { transform: translate(-1px, -2px) rotate(-1deg); }
+  20% { transform: translate(-3px, 0px) rotate(1deg); }
+  30% { transform: translate(3px, 2px) rotate(0deg); }
+  40% { transform: translate(1px, -1px) rotate(1deg); }
+  50% { transform: translate(-1px, 2px) rotate(-1deg); }
+  60% { transform: translate(-3px, 1px) rotate(0deg); }
+  70% { transform: translate(3px, 1px) rotate(-1deg); }
+  80% { transform: translate(-1px, -1px) rotate(1deg); }
+  90% { transform: translate(1px, 2px) rotate(0deg); }
+  100% { transform: translate(1px, -2px) rotate(-1deg); }
+}

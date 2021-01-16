@@ -1,0 +1,61 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+
+    <title>SCHEDULE IT</title>
+
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login-register.css">
+    <link rel="stylesheet" type="text/css" href="../css/login-register.css">
+    <link rel="stylesheet" type="text/css" href="../css/index.css">
+    <link rel="stylesheet" type="text/css" href="../css/profile.css">
+    <link rel="stylesheet" type="text/css" href="../css/snackbar.css">
+
+    <script type="text/javascript" src="../js/profile.js" defer></script>
+    <script type="text/javascript" src="../js/index.js" defer></script>
+</head>
+
+<body class="center">
+    <header class="logo-header container">
+        <img id="logo" src="../img/logo.png"></img>
+        <p id="logo-title">Schedule it</p>
+    </header>
+    <nav class="nav" id="navigation">
+        <a class="nav-item" href="profile.html">Profile</a>
+        <a class="nav-item" href="calendar.html">Calendar</a>
+        <a id="add-slots-menu-item" class="nav-item" href="add-slot.html">Add slots</a>
+    </nav>
+    <main>
+        <section id="profile" class="login-register-content">
+            <h2 id="welcome-prompt">Welcome, </h2>
+            <p id="username">Username: </p>
+            <p id="email">Email: </p>
+            <p id="role">Role: </p>
+            <div id="change-failure" class="hidden">
+                <span id="failure-message">Error!</span>
+            </div>
+            <button id="generate-verification-code-button" class="orange-buttons hidden">Generate verification code</button>
+            <p id="generated-verification-code-text" class="hidden"></p>
+            <div id="passwords" class="hidden">
+                <input type="password" id="current-password" name="current-password" placeholder="Current password">
+                <input type="password" id="new-password" name="new-password" placeholder="New password">
+                <input type="password" id="confirm-new-password" name="confirm-new-password"
+                    placeholder="Confirm new password">
+            </div>
+            <div class="flex-box" id="bottom-buttons">
+                <button id="change-password-button" class="orange-buttons">Change password</button>
+                <button id="logout-button" class="panel-buttons orange-buttons">Logout</button>
+            </div>
+        </section>
+        <section id="snackbar"></section>
+    </main>
+    <footer id="footer">
+        <h3>Created by Denislav, Eva & Petar</h3>
+        <small>&copy; Copyright 2020</small>
+    </footer>
+</body>
+
+</html>

@@ -1,0 +1,101 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+
+    <title>SCHEDULE IT</title>
+
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/calendar.css">
+    <link rel="stylesheet" href="../css/add-event.css">
+    <link rel="stylesheet" href="../css/select-time-box.css">
+
+
+    <script src="../js/showCalendars.js" defer></script>
+    <script src="../js/showEvents.js" defer></script>
+    <script src="../js/addEvent.js" defer></script>
+    <script type="text/javascript" src="../js/index.js" defer></script>
+</head>
+
+<body class="center">
+    <header class="logo-header container">
+        <img id="logo" src="../img/logo.png"></img>
+        <p id="logo-title">Schedule it</p>
+    </header>
+    <nav class="nav" id="navigation">
+        <a class="nav-item" href="profile.html">Profile</a>
+        <a class="nav-item" href="calendar.html">Calendar</a>
+        <a id="add-slots-menu-item" class="nav-item" href="add-slot.html">Add slots</a>
+    </nav>
+    <main>
+        <div id="calendars" class="container">
+            <!-- <section class="calendar">
+                <header class="calendar_header">
+                    <h1 id="header-title" class="header_title">WEB презентации</h1>
+                </header>
+                <article class="calendar_plan">
+                    <div class="cl_plan">
+                        <div id="date" class="cl_copy">2020-04-22</div>
+                        <i id="enroll_day0" class="cl_add">+</i>
+                    </div>
+                </article>
+                <article id="calendar-events" class="calendar_events">
+                    <p class="ce_title">Current delay is...</p>
+                </article>
+            </section> -->
+        </div>
+        <!-- The Modal -->
+        <section id="myModal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close">&times;</span>
+                    <h2 id="modal-title">{date} {name}</h2>
+                </div>
+                <div class="modal-body">
+                    <p>Please, select your time to present:</p>
+                    <select id="select-time">
+                    </select>
+                    <p>Enter your subject:</p>
+                    <input class="center event-input" type="text" id="subject" placeholder="Subject" required>
+                    <p>Enter description:</p>
+                    <textarea class="center event-input" type="text" id="description-input" maxlength="120" rows="5"
+                        placeholder="Description (max 120 characters)"></textarea>
+                    <p>Enter presentation file url:</p>
+                    <input class="center event-input" type="url" id="presentation_url-input"
+                        placeholder="Presentaiton file URL">
+                    <p>Enter meeting url:</p>
+                    <input class="center event-input" type="url" id="meeting_url-input" placeholder="Meeting URL">
+                    <button id="add-event-btn" class="orange-buttons">Save</button>
+                </div>
+                <div id="add-event-general-error" class="hidden">
+                    <strong id="add-event-general-error-text">Error!</strong>
+                </div>
+            </div>
+        </section>
+        <!-- Verification Code Modal -->
+        <section id="verification-modal" class="modal">
+            <div class="modal-content">
+                <div class="modal-header">
+                    <span class="close" id="close-verification-modal">&times;</span>
+                    <h2 id="verification-modal-title">Enter verification code</h2>
+                </div>
+                <div id="verification-modal-body" class="modal-body">
+                    <input class="center" type="text" id="verification-code-input" placeholder="Verification Code"
+                        required>
+                    <button id="check-verification-code-btn" class="orange-buttons">Continue</button>
+                </div>
+                <div id="verification-code-error" class="hidden">
+                    <strong id="verification-code-error-text">Error!</strong>
+                </div>
+            </div>
+        </section>
+    </main>
+    <footer id="footer">
+        <h3>Created by Denislav, Eva & Petar</h3>
+        <small>&copy; Copyright 2020</small>
+    </footer>
+</body>
+
+</html>

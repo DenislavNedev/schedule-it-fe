@@ -1,0 +1,58 @@
+<!DOCTYPE html>
+<html lang="en">
+
+<head>
+    <meta charset="UTF-8">
+    <meta name="viewport" content="width=device-width, initial-scale=1.0">
+    
+    <title>SCHEDULE IT</title>
+    
+    <link rel="icon" href="../img/logo.png" type="image/x-icon">
+    <link rel="stylesheet" href="../css/login-register.css">
+    <link rel="stylesheet" href="../css/index.css">
+    <link rel="stylesheet" href="../css/login-register.css">
+    
+    <script src="https://ajax.googleapis.com/ajax/libs/jquery/3.5.1/jquery.min.js"></script>
+    <script type="text/javascript" src="../js/login.js" defer></script>
+    <script type="text/javascript" src="../js/index.js" defer></script>
+</head>
+
+<body class="center">
+    <header class="logo-header container">
+        <img id="logo" src="../img/logo.png"></img>
+        <p id="logo-title">Schedule it</p>
+    </header>
+    <nav class="nav" id="navigation">
+        <a class="nav-item" href="profile.html">Profile</a>
+        <a class="nav-item" href="calendar.html">Calendar</a>
+        <a id="add-slots-menu-item" class="nav-item" href="add-slot.html">Add slots</a>
+    </nav>
+    <main>
+        <div class="panel-forms login-register-content">
+            <section id="login-panel" class="panels">
+                <article id="login-content">
+                    <form action="" id="login-form">
+                        <fieldset id="login-inputs">
+                            <legend class="panel-heading">Login</legend>
+                            <input type="text" name="login-username" id="login-username" placeholder="Username"
+                                required>
+                            <input type="password" name="login-password" id="login-password" placeholder="Password"
+                                required>
+                            <div id="login-failure" class="hidden">
+                                <strong id="login-failure-text">Error!</strong>
+                            </div>
+                            <button id="login-button" class="panel-buttons">Login</button>
+                            <a class="panel-links" href="register.html">Register now!</a>
+                        </fieldset>
+                    </form>
+                </article>
+            </section>
+        </div>
+    </main>
+    <footer id="footer">
+        <h3>Created by Denislav, Eva & Petar</h3>
+        <small>&copy; Copyright 2020</small>
+    </footer>
+</body>
+
+</html>

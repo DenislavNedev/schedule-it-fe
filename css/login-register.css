@@ -1,0 +1,109 @@
+.login-register-content {
+    background-color: #fff;
+    box-shadow: 0px 0px 35px -16px rgba(0, 0, 0, 0.75);
+    padding: 20px 30px;
+    color: #363b41;
+    display: inline-block;
+    /* border: 2px solid #fa7900; */
+    width: -moz-fit-content;
+    width: fit-content;
+    text-align: left;
+}
+
+input:focus {
+    outline: none !important;
+    border: 0.4px solid #fa7900;
+    box-shadow: 0 0 8px #fa7900;
+}
+
+#heading-text {
+    color: #fa7900;
+    font-size: 2em;
+}
+
+#deading #inner-text {
+    font-size: large;
+}
+
+.panel-heading {
+    margin-bottom: 10px;
+    font-weight: bold;
+    font-size: 1.2em;
+    padding: 0;
+}
+
+.panels {
+    margin-top: 10px;
+    padding: 10px 10px 0px 10px;
+}
+
+.panels fieldset > input {
+    margin-bottom: 10px;
+    height: 25px;
+    width: 20rem;
+    display: block;
+}
+
+#register-form fieldset, #login-form fieldset {
+    border: 0;
+    padding: 0px;
+}
+
+#register-inputs, #login-inputs legend {
+    color: #fa7900;
+    text-align: left;
+}
+
+#register-panel, #login-panel {
+    display: table-cell;
+}
+
+#register-panel, #login-panel {
+    padding-left: 0;
+}
+
+input {
+    display: block;
+}
+
+#remember{
+    display: inline-block;
+}
+
+.panel-buttons {
+    float: right;
+    height: 35px;
+    font-weight: bold;
+}
+
+#register-button, #login-button {
+    cursor: pointer;
+    background-color: #fa7900;
+    color: #ffffff;
+    border: none;
+}
+
+.panel-links {
+    position: relative;
+    top: 10px;
+    color: #fa7900;
+}
+
+.hidden {
+    display: none;
+}
+
+#register-failure, #login-failure {
+    color: #ea4335;
+    margin-top: 15px;
+    text-align: center;
+    margin-bottom: 5px;
+}
+
+#login-failure {
+    color: #ea4335;
+}
+
+#register-faculty-number {
+    display: none;
+}

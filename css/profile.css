@@ -1,0 +1,40 @@
+#profile {
+	padding-left: 3%;
+	padding-right: 3%;
+}
+
+#logout-button {
+    float: right;
+}
+
+#welcome-prompt {
+    text-align: center;
+}
+
+#username, #name, #email, #role, #facultyNumber {
+	display: block;
+	margin-right: 10px;
+	margin-top: 5px;
+}
+
+#bottom-buttons {
+	margin-top: 15px;
+}
+
+.flex-box {
+	display: flex;
+	justify-content: space-between;
+}
+
+#passwords {
+	margin-top: 20px;
+}
+
+#passwords input {
+	margin-bottom: 10px;
+	height: 35px;
+}
+
+.hidden {
+	display: none;
+}
