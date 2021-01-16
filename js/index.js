@@ -5,7 +5,7 @@ var username = window.localStorage.getItem("username");
 
 if (token && username) {
   var url = new URL("https://schedule-it-be.herokuapp.com/api/users/");
-  url.searchParams.append("username", "ddnedev");
+  url.searchParams.append("username", username);
 
   fetch(url, {
     method: "GET",
