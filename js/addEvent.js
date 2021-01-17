@@ -35,7 +35,7 @@ setTimeout(function () {
       const select_time = document.getElementById("select-time");
       select_time.innerHTML = "";
 
-      fetch("https://schedule-it-be.herokuapp.com/api/slots/all-slots", {
+      fetch(API_URL + "/api/slots/all-slots", {
         method: "GET",
         headers: {
           Authorization: window.localStorage.getItem("auth_token"),
@@ -105,19 +105,19 @@ setTimeout(function () {
           let meeting_url = document.getElementById("meeting_url-input").value;
 
           const username = window.localStorage.getItem("username");
-        //  const fn_number = response.facultyNumber;
+          //  const fn_number = response.facultyNumber;
 
           const event = {
             username: username,
-            subject: subject,   
+            subject: subject,
             start: start_timestamp,
             end: end_timestamp,
             description: description,
             presentationUrl: presentation_url,
-            meetingUrl: meeting_url
+            meetingUrl: meeting_url,
           };
 
-          fetch("https://schedule-it-be.herokuapp.com/api/events/add-event", {
+          fetch(API_URL + "/api/events/add-event", {
             method: "POST",
             body: JSON.stringify(event),
             headers: {

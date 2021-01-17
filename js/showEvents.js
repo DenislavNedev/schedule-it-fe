@@ -7,7 +7,7 @@ setTimeout(function () {
   // console.log(calendars.length);
 
   calendars.forEach((calendar) => {
-    fetch("https://schedule-it-be.herokuapp.com/api/events/all-events", {
+    fetch(API_URL + "/api/events/all-events", {
       method: "GET",
       headers: {
         Authorization: window.localStorage.getItem("auth_token"),
@@ -78,7 +78,7 @@ setTimeout(function () {
             event_item.addEventListener("click", (e) => {
               e.preventDefault();
 
-              if (event.start.split(" ")[0] === getToday()) {
+              if (event.start.split("T")[0] === getToday()) {
                 const queryString =
                   "?date=" +
                   calendar.childNodes[1].childNodes[0].childNodes[0].innerText +
@@ -90,7 +90,7 @@ setTimeout(function () {
                   "&subject=" +
                   event.subject +
                   "&presenter=" +
-                  event.name;
+                  event.username;
                 showVerificationCodeModal(queryString);
               }
             });
@@ -133,7 +133,7 @@ function showVerificationCodeModal(queryString) {
     } else {
       hideVerificationCodeErrorMessage();
 
-      var url = new URL("https://schedule-it-be.herokuapp.com/api/users/");
+      var url = new URL(API_URL + "/api/users/");
       url.searchParams.append(
         "username",
         window.localStorage.getItem("username")
@@ -142,7 +142,7 @@ function showVerificationCodeModal(queryString) {
       const verificationCode = document.getElementById(
         "verification-code-input"
       ).value;
-      fetch("https://schedule-it-be.herokuapp.com/api/users/verification-codes/", {
+      fetch(API_URL + "/api/users/verification-codes/", {
         method: "GET",
         headers: {
           Authorization: window.localStorage.getItem("auth_token"),
@@ -150,32 +150,20 @@ function showVerificationCodeModal(queryString) {
       })
         .then((response) => response.json())
         .then((response) => {
-          if (response.status) {
-            let isAuthorized = false;
-            for (let i = 0; i < response.codes.length; i++) {
-              if (
-                verificationCode.localeCompare(
-                  response.codes[i].verificationCode
-                ) == 0
-              ) {
-                isAuthorized = true;
-                window.location.href = "../views/timer.html" + queryString;
-                break;
-              }
+          let isAuthorized = false;
+          for (let i = 0; i < response.codes.length; i++) {
+            if (verificationCode.localeCompare(response.codes[i]) == 0) {
+              isAuthorized = true;
+              window.location.href = "../views/timer.html" + queryString;
+              break;
             }
+          }
 
-            if (!isAuthorized) {
-              addShakeEffect(verificationModal);
-              showVerificationCodeErrorMessage(
-                "You are not authorized to track the delay! If you think this is an error, please contact your teacher."
-              );
-            }
-          } else {
+          if (!isAuthorized) {
             addShakeEffect(verificationModal);
             showVerificationCodeErrorMessage(
-              "There was an error connecting to the database"
+              "You are not authorized to track the delay! If you think this is an error, please contact your teacher."
             );
-            console.log(response.message);
           }
         });
     }

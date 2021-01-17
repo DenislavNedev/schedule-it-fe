@@ -17,7 +17,7 @@ const showErrorMessage = (message) => {
 };
 
 const passLoginData = (userData) => {
-  fetch("https://schedule-it-be.herokuapp.com/login", {
+  fetch(API_URL + "/login", {
     method: "POST",
     body: JSON.stringify(userData),
   }).then((response) => {

@@ -1,10 +1,11 @@
 "use strict";
+const API_URL = "https://schedule-it-be.herokuapp.com";
 
 var token = window.localStorage.getItem("auth_token");
 var username = window.localStorage.getItem("username");
 
 if (token && username) {
-  var url = new URL("https://schedule-it-be.herokuapp.com/api/users/");
+  var url = new URL(API_URL + "/api/users/");
   url.searchParams.append("username", username);
 
   fetch(url, {

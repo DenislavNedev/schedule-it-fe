@@ -3,7 +3,14 @@
 window.onload = (event) => {
   event.preventDefault();
 
-  fetch("https://schedule-it-be.herokuapp.com/api/slots/all-slots", {
+  if (
+    !window.localStorage.getItem("username") ||
+    !window.localStorage.getItem("auth_token")
+  ) {
+    window.location.replace("../views/login.html");
+  }
+
+  fetch(API_URL + "/api/slots/all-slots", {
     method: "GET",
     headers: {
       Authorization: window.localStorage.getItem("auth_token"),
@@ -11,7 +18,7 @@ window.onload = (event) => {
   })
     .then((response) => response.json())
     .then((res) => {
-         res.forEach((slot) => {
+      res.forEach((slot) => {
         const calendar = document.createElement("section");
         calendar.setAttribute("class", "calendar");
 

@@ -10,20 +10,20 @@ const goToCalendar = document.getElementById("go-to-calendar-button");
 
 //Close modal
 window.onclick = function (event) {
-    if (event.target == modal) {
-        modal.style.display = "none";
-        document.getElementById("add-slots-form").reset();
-    }
-}
+  if (event.target == modal) {
+    modal.style.display = "none";
+    document.getElementById("add-slots-form").reset();
+  }
+};
 
 addAnotherSlot.addEventListener("click", (event) => {
   event.preventDefault();
-  location.reload()
+  location.reload();
 });
 
 goToCalendar.addEventListener("click", (event) => {
   event.preventDefault();
-  location.replace("calendar.html")
+  location.replace("calendar.html");
 });
 
 function setMinDate() {
@@ -75,7 +75,7 @@ addSlotBtn.addEventListener("click", (event) => {
       startHour: document.getElementById("add-slot-time-start").value,
       endHour: document.getElementById("add-slot-time-end").value,
       period: document.getElementById("add-slot-time-period").value,
-      delay: 0
+      delay: 0,
     };
 
     passSlotData(slot);
@@ -83,24 +83,22 @@ addSlotBtn.addEventListener("click", (event) => {
 });
 
 const passSlotData = (slotData) => {
-
-  fetch("https://schedule-it-be.herokuapp.com/api/slots/add-slot", {
+  fetch(API_URL + "/api/slots/add-slot", {
     method: "POST",
     body: JSON.stringify(slotData),
     headers: {
       Authorization: window.localStorage.getItem("auth_token"),
-      "Content-Type": "application/json"
+      "Content-Type": "application/json",
     },
-  })
-    .then((response) => {
-      console.log(response)
-      if (response.status) {
-        modal.style.display = "block";
-        console.log("Succesfull added new slot!");
-      } else {
-        showErrorMessage("Something happened, please try again later.");
-      }
-    });
+  }).then((response) => {
+    console.log(response);
+    if (response.status) {
+      modal.style.display = "block";
+      console.log("Succesfull added new slot!");
+    } else {
+      showErrorMessage("Something happened, please try again later.");
+    }
+  });
 };
 
 const showErrorMessage = (message) => {

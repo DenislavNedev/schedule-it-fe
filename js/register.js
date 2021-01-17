@@ -72,7 +72,7 @@ registerButton.addEventListener("click", (event) => {
   } else if (!isEmailCorrect(userData.email)) {
     showFailureMessage("Email is not valid!");
   } else {
-    fetch("https://schedule-it-be.herokuapp.com/api/users/sign-up", {
+    fetch(API_URL + "/api/users/sign-up", {
       method: "POST",
       body: JSON.stringify(userData),
       headers: {
@@ -87,7 +87,7 @@ registerButton.addEventListener("click", (event) => {
         };
 
         // The code bellow is repeatable - need to be fixed.
-        fetch("https://schedule-it-be.herokuapp.com/login", {
+        fetch(API_URL + "/login", {
           method: "POST",
           body: JSON.stringify(loginUser),
         }).then((response) => {

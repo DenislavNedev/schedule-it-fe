@@ -7,7 +7,14 @@ console.log(document.cookie);
 window.onload = (event) => {
   event.preventDefault();
 
-  var url = new URL("https://schedule-it-be.herokuapp.com/api/users/");
+  if (
+    !window.localStorage.getItem("username") ||
+    !window.localStorage.getItem("auth_token")
+  ) {
+    window.location.replace("../views/login.html");
+  }
+
+  var url = new URL(API_URL + "/api/users/");
   url.searchParams.append("username", window.localStorage.getItem("username"));
 
   fetch(url, {
@@ -59,10 +66,11 @@ window.onload = (event) => {
             const generatedCode = generateCode(15);
             codeNode.innerText = "Verification code: " + generatedCode;
 
-            var url = new URL(
-              "https://schedule-it-be.herokuapp.com/api/users/verification-codes/"
+            var url = new URL(API_URL + "/api/users/verification-codes/");
+            url.searchParams.append(
+              "username",
+              window.localStorage.getItem("username")
             );
-            url.searchParams.append("username", "ddnedev");
             url.searchParams.append("verificationCode", generatedCode);
 
             // put request to server with code;
